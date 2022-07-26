@@ -1,19 +1,6 @@
 <h1 align="center">NvChad</h1>
 
 <div align="center">
-	<a href="https://nvchad.github.io/">Home</a>
-  <span> • </span>
-    	<a href="https://nvchad.github.io/quickstart/install">Install</a>
-  <span> • </span>
-       	<a href="https://nvchad.github.io/contribute">Contribute</a>
-  <span> • </span>
-	<a href="https://github.com/NvChad/NvChad#gift_heart-support">Support</a>
-  <span> • </span>
-        <a href="https://nvchad.github.io/Features">Features</a>
-  <p></p>
-</div> 
-
-<div align="center">
  
 [![Super Linter](https://img.shields.io/github/workflow/status/NvChad/NvChad/Super-Linter/main?style=flat-square&logo=github&label=Build&color=8DBBE9)]()
 <a href="https://github.com/NvChad/NvChad/blob/main/LICENSE"
@@ -27,7 +14,50 @@
 [![Matrix](https://img.shields.io/badge/Matrix-40aa8b.svg?style=flat-square&logo=Matrix&logoColor=white)](https://matrix.to/#/#nvchad:matrix.org)
 [![Telegram](https://img.shields.io/badge/Telegram-blue.svg?style=flat-square&logo=Telegram&logoColor=white)](https://t.me/DE_WM)
 
-  </div>
+</div>
+
+	
+	
+## install
+
+- Docker
+```bash
+  docker run -w /root -it alpine:edge sh -uelic '
+    tail -f /dev/null
+    apk add git nodejs neovim ripgrep alpine-sdk --update
+    git clone https://github.com/kimud6003/NvChad  ~/.config/nvim
+    nvim
+    '
+```
+
+- Mac
+```bash
+git clone https://github.com/kimud6003/NvChad ~/.config/nvim; nvim
+```
+
+## uninstall  
+
+```bash  
+rm -rf ~/.config/nvim  
+rm -rf ~/.local/share/nvim  
+rm -rf ~/.cache/nvim  
+```
+
+
+<div align="center">
+	<a href="https://nvchad.github.io/">Home</a>
+  <span> • </span>
+    	<a href="https://nvchad.github.io/getting-started/setup">Install</a>
+  <span> • </span>
+       	<a href="https://nvchad.github.io/contribute">Contribute</a>
+  <span> • </span>
+	<a href="https://github.com/NvChad/NvChad#gift_heart-support">Support</a>
+  <span> • </span>
+        <a href="https://nvchad.github.io/Extras">Extras</a>
+  <p></p>
+</div> 
+
+
 
 ## Showcase
 
@@ -43,11 +73,17 @@
 
 - NvChad is a neovim config written in lua aiming to provide a base configuration with very beautiful UI and blazing fast startuptime (around 0.02 secs ~ 0.07 secs). We tweak UI plugins such as telescope, nvim-tree, bufferline etc well to provide an aesthetic UI experience. 
 
-- Lazy loading is done 93% of the time meaning that plugins will not be loaded by default, they will be loaded only when required also at specific commands, events etc. This lowers the startuptime and it was like 0.07~ secs tested on an old pentium machine 1.4ghz + 4gb ram & HDD.
+### Markdown Preview
 
-- NvChad isnt a framework! Its supposed to be used as a "base" config, so users could tweak the defaults well, can also remove the things they dont like in the default config and build their config on top of it. Users can tweak the entire default config while staying in their custom config (lua/custom dir). This is the control center of the user's config and gitignored so the users can stay update to-date with NvChad's latest config (main branch) while still controlling it with their chadrc (file that controls entire custom dir)
+- please Run code 
 
-## Theme Showcase
+```bash
+cd ~/.local/share/nvim/site/pack/packer/start/
+git clone https://github.com/iamcco/markdown-preview.nvim.git
+cd markdown-preview.nvim
+yarn install
+yarn build
+``` 
 
 <details><summary> <b>Images (Click to expand!)</b></summary>
 
@@ -144,3 +180,4 @@ I'm (@siduck) really very sorry to remove the previous charity links but I had t
 
 - [Elianiva](https://github.com/elianiva) helped me with NeoVim Lua related issues many times, NvChad wouldn't exist without his help at all as he helped me in my initial neovim journey!
 - @lorvethe for making the beautiful NvChad logo.
+
