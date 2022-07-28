@@ -42,11 +42,6 @@ M.plugins = {
       ["nvim-telescope/telescope.nvim"] = override.telescope,
       ["lewis6991/gitsigns.nvim"] = override.gitsigns,
    },
-   options = {
-      lspconfig = {
-         setup_lspconf = "custom.plugins.lspconfig",
-      },
-   },
    user = require "custom.plugins",
 }
 
